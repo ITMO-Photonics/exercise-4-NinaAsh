@@ -1,13 +1,12 @@
-### ---------------------------------------------------------------------
-### Exercise-4: Write a Python script which calculates volume 
-###       and surface area of a cylinder of radius R and length L.
-### ---------------------------------------------------------------------
-import math # use math.pi from this module
+pi = 3.14    
+def calculate(R, L):
+    surface = 2 * pi * R * (R + L)
+    volume = pi * R * R * L 
+    return ('surface: ' +  str(surface),
+            'Volume: ' +  str(volume))
+    
+    
+R = int(input('Please Enter the radius of a Cylinder: '))
+L = int(input('Please Enter the length of a Cylinder: '))
 
-# Function for calculation of volume of a cylinder 
-def cylinder_volume(R, L):    
-#    ( your script is here) 
-  
-# Function for calculation of surface area of a cylinder
-def cylinder_area(R, L):
-#    ( your script is here)
+print(calculate(R, L))
